@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <DataGrid Name="dataContainer" CanUserAddRows="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="275" VerticalAlignment="Top" Width="374" Margin="10,10,0,0" AddingNewItem="dataContainerAddingNewItem">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Id}" Header="Id" Width="10*"/>
+                <DataGridTextColumn Binding="{Binding Path=Name}" Header="Название" Width="30*"/>
+                <DataGridTextColumn Binding="{Binding Path=Price}" Header="Цена" Width="20*"/>
+                <DataGridTextColumn Header="ыва" Width="30*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBox Name="Reciver" HorizontalAlignment="Left" Height="25" Margin="400,235,0,0" TextWrapping="Wrap" Text="{Binding ElementName=Sender, Path=Text, Mode=TwoWay}" VerticalAlignment="Top" Width="107"/>
+        <TextBox Name="Sender" HorizontalAlignment="Left" Height="27" Margin="400,265,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="107"/>
+
+    </Grid>
+</Window>
